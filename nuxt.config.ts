@@ -20,8 +20,7 @@ export default defineNuxtConfig({
         '~': '.',
         '@': '.',
         '~/stores': './stores'
-      },
-      extensions: ['.js', '.json', '.ts', '.vue']
+      }
     }
   },
   app: {
