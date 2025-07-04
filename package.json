@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt generate",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -19,7 +19,8 @@
     "mobile:build-full": "nuxt generate && npx cap sync",
     "mobile:open": "npx cap open android",
     "mobile:run": "npx cap run android",
-    "build:apk": "npm run mobile:build && npx cap open android"
+    "build:apk": "npm run mobile:build && npx cap open android",
+    "build:netlify": "npm run generate"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.0",

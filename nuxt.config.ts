@@ -15,6 +15,14 @@ export default defineNuxtConfig({
   },
   vite:{
     plugins: [svgLoader()],
+    resolve: {
+      alias: {
+        '~': '.',
+        '@': '.',
+        '~/stores': './stores'
+      },
+      extensions: ['.js', '.json', '.ts', '.vue']
+    }
   },
   app: {
     head: {
