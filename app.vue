@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { useDarkModeStore } from '~/stores/darkMode.ts'
+import { useDarkModeStore } from '~/stores/darkMode'
 
 const darkModeStore = useDarkModeStore()
 

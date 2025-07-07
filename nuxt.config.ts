@@ -14,14 +14,7 @@ export default defineNuxtConfig({
     }
   },
   vite:{
-    plugins: [svgLoader()],
-    resolve: {
-      alias: {
-        '~': '.',
-        '@': '.',
-        '~/stores': './stores'
-      }
-    }
+    plugins: [svgLoader()]
   },
   app: {
     head: {
