@@ -1,0 +1,1 @@
+import{aa as r,m as e}from"./S-9llA6t.js";import{u as i}from"./-ECo5pt8.js";const s=r(t=>{if(t.path==="/admin/area")return;const a=i().isAuthenticated();if(!a&&t.path!=="/login"&&t.path!=="/register")return e("/login");if(a&&(t.path==="/login"||t.path==="/register"))return e("/dashboard")});export{s as default};
