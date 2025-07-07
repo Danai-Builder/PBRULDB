@@ -11,8 +11,7 @@ export default async function connectDB() {
       return
     }
 
-    const config = useRuntimeConfig()
-    const mongoUri = config.mongodbUri || process.env.MONGODB_URI || 'mongodb://localhost:27017/PBRU_Research_Management'
+    const mongoUri = process.env.MONGODB_URI || 'mongodb+srv://test:QuZ2dTZ9ZSIvq7YH@pbru-research.wspcl21.mongodb.net/?retryWrites=true&w=majority&appName=PBRU-research'
     
     console.log('Attempting to connect to MongoDB...')
     

@@ -12,6 +12,7 @@ onMounted(() => {
 <template>
   <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
     <!-- Markup shared across all pages, ex: NavBar -->
+     <!-- kittipon -->
     <NuxtPage />
   </div>
 </template>

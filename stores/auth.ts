@@ -91,8 +91,15 @@ export const useAuthStore = defineStore('auth', () => {
       })
 
       if (!response.ok) {
-        const error = await response.json()
-        throw new Error(error.message || 'Failed to update profile')
+        let errorMessage = 'Failed to update profile'
+        try {
+          const error = await response.json()
+          errorMessage = error.message || errorMessage
+        } catch (parseError) {
+          // If response is not JSON (e.g., HTML error page)
+          errorMessage = `Server error: ${response.status} ${response.statusText}`
+        }
+        throw new Error(errorMessage)
       }
 
       const data = await response.json()
@@ -130,8 +137,15 @@ export const useAuthStore = defineStore('auth', () => {
       })
 
       if (!response.ok) {
-        const error = await response.json()
-        throw new Error(error.message || 'Login failed')
+        let errorMessage = 'Login failed'
+        try {
+          const error = await response.json()
+          errorMessage = error.message || errorMessage
+        } catch (parseError) {
+          // If response is not JSON (e.g., HTML error page)
+          errorMessage = `Server error: ${response.status} ${response.statusText}`
+        }
+        throw new Error(errorMessage)
       }
 
       const data: LoginResponse = await response.json()

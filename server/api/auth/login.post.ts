@@ -55,7 +55,10 @@ export default defineEventHandler(async (event) => {
       })
       await user.save()
 
-
+      throw createError({
+        statusCode: 401,
+        message: 'Invalid credentials'
+      })
     }
 
     // Record successful login
