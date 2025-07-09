@@ -108,6 +108,19 @@
                 สร้างบัญชีใหม่
               </NuxtLink>
             </div>
+            
+            <!-- Back Button -->
+            <div class="mt-6">
+              <NuxtLink 
+                to="/" 
+                class="w-full flex justify-center items-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm text-base font-medium text-indigo-600 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
+              >
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                กลับสู่หน้าหลัก
+              </NuxtLink>
+            </div>
           </div>
         </div>
       </div>

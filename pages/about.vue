@@ -8,6 +8,9 @@
             <NuxtLink to="/gallery" class="text-2xl font-bold text-blue-600">PBRU Gallery</NuxtLink>
           </div>
           <div class="hidden md:flex items-center space-x-6">
+            <NuxtLink to="/" class="text-gray-700 hover:text-blue-600 font-medium">
+              หน้าหลัก
+            </NuxtLink>
             <NuxtLink to="/gallery" class="text-gray-700 hover:text-blue-600 font-medium">
               ผลงาน
             </NuxtLink>
