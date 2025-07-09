@@ -1,12 +1,9 @@
 import { defineEventHandler, getRequestHeaders } from 'h3'
 import jwt from 'jsonwebtoken'
 import User from '~/server/models/User'
-import connectDB from '~/server/utils/mongodb'
 
 export default defineEventHandler(async (event) => {
   try {
-    // Ensure MongoDB connection
-    await connectDB()
     // Get the authorization header
     const headers = getRequestHeaders(event)
     const authHeader = headers.authorization

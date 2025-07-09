@@ -3,12 +3,9 @@ import { writeFile } from 'fs/promises'
 import { join } from 'path'
 import { v4 as uuidv4 } from 'uuid'
 import User from '~/server/models/User'
-import connectDB from '~/server/utils/mongodb'
 
 export default defineEventHandler(async (event) => {
   try {
-    await connectDB()
-
     // Get the multipart form data
     const files = await readMultipartFormData(event)
     if (!files || files.length === 0) {

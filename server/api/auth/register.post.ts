@@ -1,6 +1,5 @@
 import { defineEventHandler, readBody } from 'h3'
 import User from '~/server/models/User'
-import connectDB from '~/server/utils/mongodb'
 
 interface RegisterBody {
   name: string
@@ -10,7 +9,6 @@ interface RegisterBody {
 
 export default defineEventHandler(async (event) => {
   try {
-    const client = await connectDB
     const body = await readBody<RegisterBody>(event)
     const { name, email, password } = body
 

@@ -26,14 +26,14 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    'nuxt-mongodb-auth',
     'nuxt-mongoose',
   ],
   mongoose: {
     uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/PBRU_Research_Management',
-    options: {
+    options: {},
+    modelsDir: 'models',
       // Add any mongoose options here if needed
-    }
+    
   },
   runtimeConfig: {
     jwtSecret: process.env.JWT_SECRET || 'your-secret-key',

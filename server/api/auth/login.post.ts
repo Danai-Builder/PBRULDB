@@ -1,7 +1,6 @@
 import { defineEventHandler, readBody, getRequestHeaders } from 'h3'
 import jwt from 'jsonwebtoken'
 import User from '~/server/models/User'
-import connectDB from '~/server/utils/mongodb'
 
 interface LoginBody {
   email: string
@@ -10,7 +9,6 @@ interface LoginBody {
 
 export default defineEventHandler(async (event) => {
   try {
-    await connectDB()
     const body = await readBody<LoginBody>(event)
     const { email, password } = body
 

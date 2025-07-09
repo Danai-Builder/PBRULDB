@@ -1,14 +1,10 @@
 import { defineEventHandler, readBody } from 'h3'
 import User from '~/server/models/User'
 import bcrypt from 'bcryptjs'
-import connectDB from '~/server/utils/mongodb'
 import jwt from 'jsonwebtoken'
 
 export default defineEventHandler(async (event) => {
   try {
-    // Ensure MongoDB connection
-    await connectDB()
-
     // Check if admin already exists
     const existingAdmin = await User.findOne({ email: 'Localdatabase@pbru.th' })
     if (existingAdmin) {

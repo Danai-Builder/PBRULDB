@@ -1,12 +1,9 @@
 import { defineEventHandler } from 'h3'
 import User from '~/server/models/User'
 import bcrypt from 'bcryptjs'
-import connectDB from '~/server/utils/mongodb'
 
 export default defineEventHandler(async (event) => {
   try {
-    await connectDB()
-
     // Delete existing admin if exists
     await User.deleteOne({ email: 'Localdatabase@pbru.th' })
 

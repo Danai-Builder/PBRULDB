@@ -2,10 +2,8 @@ import { defineEventHandler, readMultipartFormData } from 'h3'
 import User from '~/server/models/User'
 import { promises as fs } from 'fs'
 import path from 'path'
-import connectDB from '~/server/utils/mongodb'
 
 export default defineEventHandler(async (event) => {
-  await connectDB()
   const form = await readMultipartFormData(event)
   const file = form?.find(f => f.name === 'avatar')
   const userId = form?.find(f => f.name === 'userId')?.data?.toString()
