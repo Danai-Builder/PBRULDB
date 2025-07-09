@@ -77,6 +77,22 @@
       </div>
     </section>
 
+    <!-- Image Slideshow Section -->
+    <section class="py-8 md:py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">🖼️ ภาพกิจกรรมโดดเด่น</h2>
+          <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            ชมภาพกิจกรรมและผลงานเด่นจากมหาวิทยาลัยราชภัฏเพชรบุรี
+          </p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <ImageSlideshow />
+        </div>
+      </div>
+    </section>
+
     <!-- News Section -->
     <section class="py-8 md:py-12 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
