@@ -24,7 +24,7 @@ export const useAuthStore = defineStore('auth', () => {
   
 
   // โหลดข้อมูลจาก localStorage เมื่อเริ่มต้น
-  if (process.client) {
+  if (import.meta.client) {
     const savedToken = localStorage.getItem('token')
     const savedUser = localStorage.getItem('user')
     
@@ -52,7 +52,7 @@ export const useAuthStore = defineStore('auth', () => {
 
   const setToken = (newToken: string) => {
     token.value = newToken
-    if (process.client) {
+    if (import.meta.client) {
       localStorage.setItem('token', newToken)
     }
   }
@@ -72,7 +72,7 @@ export const useAuthStore = defineStore('auth', () => {
     }
     
     user.value = plainUser
-    if (process.client) {
+    if (import.meta.client) {
       localStorage.setItem('user', JSON.stringify(plainUser))
       localStorage.setItem('userName', plainUser.name)
       localStorage.setItem('userRole', plainUser.role)
@@ -160,7 +160,7 @@ export const useAuthStore = defineStore('auth', () => {
   const logout = () => {
     token.value = null
     user.value = null
-    if (process.client) {
+    if (import.meta.client) {
       localStorage.removeItem('token')
       localStorage.removeItem('user')
       localStorage.removeItem('userName')
