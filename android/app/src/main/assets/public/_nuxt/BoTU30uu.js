@@ -1,1 +1,0 @@
-import{e as n,c as o,a,o as t}from"./S-9llA6t.js";const c=n({__name:"basic-information",setup(r){return(s,e)=>(t(),o("div",null,e[0]||(e[0]=[a("h1",null,"Basic Information",-1)])))}});export{c as default};
