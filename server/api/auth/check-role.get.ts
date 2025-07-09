@@ -1,6 +1,7 @@
 import { defineEventHandler, getRequestHeaders } from 'h3'
 import jwt from 'jsonwebtoken'
 import User from '~/server/models/User'
+import { defineMongooseModel } from '#nuxt/mongoose'
 
 export default defineEventHandler(async (event) => {
   try {

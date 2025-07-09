@@ -142,7 +142,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useAuthStore } from '../../stores/auth'
-import { useDarkModeStore } from '~/stores/darkMode'
+import { useDarkModeStore } from '~/stores'
 import { useRouter, useRoute } from '#imports'
 import SidebarNavigation from '~/components/SidebarNavigation.vue'
 

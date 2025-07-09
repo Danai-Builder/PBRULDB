@@ -140,7 +140,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useAuthStore } from '../stores/auth'
+import { useAuthStore } from '../stores'
 
 const name = ref('')
 const email = ref('')

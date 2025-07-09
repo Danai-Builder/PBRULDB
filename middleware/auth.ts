@@ -1,5 +1,5 @@
 import { navigateTo } from '#app'
-import { useAuthStore } from '../stores/auth'
+import { useAuthStore } from '../stores'
 
 export default defineNuxtRouteMiddleware((to) => {
   if (to.path === '/admin/area') {

@@ -12,8 +12,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useAuthStore } from '../../stores/auth'
-import { useDarkModeStore } from '~/stores/darkMode'
+import { useAuthStore, useDarkModeStore } from '~/stores'
 
 const authStore = useAuthStore()
 const isSidebarOpen = ref(false)

@@ -1,6 +1,7 @@
 import { defineEventHandler } from 'h3'
 import User from '~/server/models/User'
 import bcrypt from 'bcryptjs'
+import { defineMongooseModel } from '#nuxt/mongoose'
 
 export default defineEventHandler(async (event) => {
   try {

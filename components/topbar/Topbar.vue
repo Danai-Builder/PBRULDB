@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useDarkModeStore } from '~/stores/darkMode'
-import { useAuthStore } from '../../stores/auth'
+import { useDarkModeStore, useAuthStore } from '~/stores'
 import { ref, computed } from 'vue'
 
 const darkModeStore = useDarkModeStore()
